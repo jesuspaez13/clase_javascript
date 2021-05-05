@@ -634,9 +634,122 @@ console.log(!!undefined); // false == Boolean(undefined)
 // ni null ni undefined.
 // 3. Si todos los operandos han sido evaluados son nulos o undefined regresa el último.
 
+
+
 a = null ?? undefined ?? undefined ?? null ?? "hola" ?? null ?? 'carlos'; // "hola"
 
 a = undefined ?? undefined ?? undefined ?? null ?? null ?? null ; // null
+
+
+// BUCLES WHILE Y FOR
+
+/* While( condición){
+}*/
+let i = 1;
+while(i<=10){
+    console.log(`El valor de i es: ${i}`);
+    i++;
+}
+
+console.log('****************');
+i = 10;
+while(i){
+    console.log(`El valor de i es: ${i}`);
+    i--;
+}
+
+// do - while
+
+/*
+do {
+}while(condición);
+*/
+console.log('****************');
+i = 1;
+do{
+console.log(`El valor de i es ${i}`);
+i++;
+}while(i<= 10);
+
+// Ciclo for
+
+/*
+    for(comienzo; condición; incremento){
+    }
+*/
+
+console.log('****************');
+for(i=0; i<= 10; i++){
+
+console.log(`El valor de i es ${i}`);
+}
+
+console.log('****************');
+for(i=10; i>= 0; i--){
+
+console.log(`El valor de i es ${i}`);
+}
+
+
+// Alcance de la variable
+console.log('****************');
+for(let z=0; z<=10; z++){
+    console.log(`El valor de z es ${z}`);
+}
+
+//console.log(`El valor de z por fuera es ${z}`);
+
+console.log('****************');
+let w = 0;
+for(w=0; w<=10; w++){
+    console.log(`El valor de w es ${w}`);
+}
+
+console.log(`El valor de w por fuera es ${w}`);
+
+// Saltado de partes
+
+console.log('****************');
+w = 0;
+for(; w<=10;){
+    console.log(`El valor de w es ${w++}`);
+}
+
+// Break y continue
+console.log('******** Breack ********');
+w = 0;
+while(1){
+    console.log(`El valor de w es ${w++}`);
+    if(w == 11) break;
+}
+
+for(i=1; i<= 10; i ++){
+    if (i%2 != 0) continue;
+    console.log(`${i} es un número par.`)
+}
+
+// Etiqueta para break y continue
+console.log('******** Etiquetas ********');
+for(i =0; i<= 10; i ++){
+    for(j =0; j<= 10; j ++){
+
+        console.log(`La suma de i+j es ${i+j}`);
+        if (j == 2) break;
+    }
+     if(j == 2) break;
+}
+console.log('Salió')
+
+// Etiqueta para break y continue
+console.log('******** Etiquetas ********');
+princial: for(i =0; i<= 10; i ++){
+    for(j =0; j<= 10; j ++){ 
+        console.log(`La suma de i+j es ${i+j}`);
+        if (j == 2) break princial;
+    }
+}
+console.log('Salió')
+
 
 
 
